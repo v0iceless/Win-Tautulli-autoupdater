@@ -2,7 +2,7 @@
 PowerShell script to pull and install new version of Tautulli if one is available
 
 # Initial Script Setup
-You will want to modifythe following categories
+You will want to modify the following categories
   1. ```$APIKey``` will need to be the API key for your specific ```Tautulli``` application.
   2. ```$TautulliDir``` will point to where your ```Tautulli``` application resides.
   3. ```$TautulliURL``` is your specific host location, or you can just leave the default ```http://localhost:8181```.
