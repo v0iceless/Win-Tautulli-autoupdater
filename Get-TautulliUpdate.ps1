@@ -1,12 +1,12 @@
-
+﻿
 # The API key to be used when requesting current details from your Tautulli installation
-$APIKey = "APIKEY"
+$APIKey = "cfc2c681723f437f8bfd67468e22e3a7"
 # The folder Tautulli is running from
-$TautulliDir = "C:\location"
+$TautulliDir = "D:\Tautulli-Monitor\Tautulli"
 # The address Tautulli is listening on (default is http://localhost:8181)
 $TautulliURL = "http://localhost:8181"
 # The temp directory where the install will be run from.
-$UpdaterPath = "C:\location"
+$UpdaterPath = "D:\Tautulli-Updates\"
 # The filename of the Ombi download
 $Filename = "Tautulli-windows-v$TautulliUpdate-x64.exe"
 
@@ -44,9 +44,9 @@ $TautulliUpdate = Get-NewVersion
 $download = "https://github.com/Tautulli/Tautulli/releases/download/v$TautulliUpdate/$Filename"
 $dir = "$UpdaterPath$Filename"
 
-Remove-Item "C:\temp\Script\tautulli-update.txt" -Force -ErrorAction SilentlyContinue
+Remove-Item "C:\temp\Script\Logs\tautulli-update.txt" -Force -ErrorAction SilentlyContinue
 #Compare current version to latest version, define $UpdateNeeded
-Start-Transcript -Path "C:\temp\Logs\tautulli-update.txt"               ### <<<---- Change this location
+Start-Transcript -Path "C:\temp\Scripts\Logs\tautulli-update.txt"
 if ($TautulliCurrent -ne $TautulliUpdate) {
     $UpdateNeeded = $true
 }
